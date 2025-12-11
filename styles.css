@@ -6,23 +6,23 @@
 
 body {
     font-family: "Cinzel", serif;
-    background: #0d0b11;
+    background: url("https://media.giphy.com/media/S3F8kkGTHZ4Y/giphy.gif") center/cover fixed;
     color: #e6d9c3;
     overflow-x: hidden;
 }
 
-/*━━━━━━━━━━━━━━━━━━━━━━
+/*══════════════════════════════
   HEADER GRAN COMEDOR
-━━━━━━━━━━━━━━━━━━━━━━*/
+══════════════════════════════*/
 .hogwarts-header {
     height: 45vh;
-    background: url("https://i.imgur.com/dL9O8sO.jpeg") center/cover no-repeat;
+    background: url("https://media.giphy.com/media/mz1kJeDVueKC4/giphy.gif") center/cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-shadow: 0 0 20px #000;
-    border-bottom: 4px solid #6e552f;
+    border-bottom: 4px solid #c7a869;
     position: relative;
 }
 
@@ -34,64 +34,48 @@ body {
 }
 
 .tagline {
-    font-size: 24px;
+    font-size: 26px;
     color: #e6d9c3;
 }
 
-/* Velas flotantes */
-.hogwarts-header::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: url("https://i.imgur.com/OW9y7Kv.png") center/contain repeat-x;
-    animation: candles 9s linear infinite;
-    opacity: 0.6;
-}
-
-@keyframes candles {
-    from { transform: translateY(0); }
-    to { transform: translateY(-40px); }
-}
-
-/*━━━━━━━━━━━━━━━━━━━━━━
+/*══════════════════════════════
   CONTENEDOR PRINCIPAL
-━━━━━━━━━━━━━━━━━━━━━━*/
+══════════════════════════════*/
 .content {
     width: 90%;
     max-width: 1100px;
     margin: 50px auto;
 }
 
-/* Caja de introducción estilo pergamino */
+/* Caja de introducción estilo pergamino animado */
 .intro-box {
-    background: url("https://i.imgur.com/rDhdO3G.jpg") center/cover;
+    background: url("https://media.giphy.com/media/4Pcf0yfcGUNgY/giphy.gif") center/cover;
     padding: 30px;
-    border: 3px solid #463826;
+    border: 3px solid #c7a869;
     border-radius: 12px;
-    box-shadow: 0 0 25px rgba(255, 218, 150, 0.3);
+    box-shadow: 0 0 25px rgba(255, 218, 150, 0.4);
     font-size: 19px;
     text-align: center;
     margin-bottom: 40px;
 }
 
-/* Selector */
+/* Selector de casa */
 .selector {
     margin-top: 20px;
 }
 
 .selector select {
     padding: 10px 16px;
-    border: 2px solid #463826;
+    border: 2px solid #c7a869;
     border-radius: 6px;
     background: #faecd3;
     color: #2b1c12;
     font-size: 18px;
 }
 
-/*━━━━━━━━━━━━━━━━━━━━━━
+/*══════════════════════════════
   TARJETAS MÁGICAS
-━━━━━━━━━━━━━━━━━━━━━━*/
+══════════════════════════════*/
 .cards-container {
     display: flex;
     justify-content: space-between;
@@ -101,9 +85,9 @@ body {
 
 .spell-card {
     width: 32%;
-    background: rgba(34, 22, 14, 0.9);
+    background: rgba(34, 22, 14, 0.92);
     padding: 25px;
-    border: 3px solid #6e552f;
+    border: 3px solid #c7a869;
     border-radius: 10px;
     box-shadow: 0 0 25px rgba(255, 235, 180, 0.3);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -141,9 +125,9 @@ body {
     transform: scale(1.06);
 }
 
-/*━━━━━━━━━━━━━━━━━━━━━━
+/*══════════════════════════════
   PARTÍCULAS
-━━━━━━━━━━━━━━━━━━━━━━*/
+══════════════════════════════*/
 #particles {
     position: fixed;
     top: 0;
