@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>SmartSleep • Grimorio del Sueño</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js"></script>
-
-  <!-- Fuentes nuevas -->
+  <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/harry-p" rel="stylesheet" />
 </head>
 
 <body>
-  <div class="scroll-frame">
-    <div class="container">
-      <h1 class="titulo">SmartSleep: Grimorio del Sueño</h1>
 
-      <p class="subtitulo">
-        Hechicería nocturna y secretos del descanso profundo ✨
+  <!-- Fondo Gran Comedor -->
+  <header class="hogwarts-header">
+    <h1 class="main-title">SmartSleep</h1>
+    <p class="tagline">El Grimorio del Sueño</p>
+  </header>
+
+  <!-- Contenido principal -->
+  <section class="content">
+
+    <div class="intro-box">
+      <p>
+        Bienvenido, hechicero.  
+        Este grimorio contiene secretos prohibidos para dominar el arte del descanso profundo.  
+        Elige tu casa y desbloquea tus encantamientos nocturnos. ✨
       </p>
 
-      <div class="house-selector">
-        <label for="house">Elige tu casa:</label>
+      <div class="selector">
+        <label>Selecciona tu Casa:</label>
         <select id="house">
           <option value="">— Selecciona —</option>
           <option value="gryffindor">🦁 Gryffindor</option>
@@ -30,26 +36,40 @@
           <option value="ravenclaw">🦅 Ravenclaw</option>
         </select>
       </div>
+    </div>
 
-      <div class="gif-container">
-        <img class="magic-image" src="https://media.giphy.com/media/10zxDv7Hv5RF9C/giphy.gif" alt="Magia" />
+    <!-- Tarjetas mágicas -->
+    <div class="cards-container">
+
+      <div class="spell-card">
+        <h3>Somnium Revelio</h3>
+        <p>Revela patrones ocultos de tu sueño mediante artes arcanas.</p>
+        <button class="card-btn">Invocar</button>
       </div>
 
-      <p class="texto">
-        Bienvenido aprendiz de hechicero.<br><br>
-        Este grimorio forma parte de las prácticas iniciales
-        del <strong>Proyecto Docker</strong>.<br>
-        Usa tus encantamientos con sabiduría. 🪄
-      </p>
+      <div class="spell-card">
+        <h3>Noctis Guardian</h3>
+        <p>Protección mágica para un descanso profundo y estable.</p>
+        <button class="card-btn">Activar</button>
+      </div>
 
-      <button id="spell-button" class="spell-button">Invocar encantamiento</button>
+      <div class="spell-card">
+        <h3>Tempus Dormiens</h3>
+        <p>Sincroniza tu reloj interno con magia antigua.</p>
+        <button class="card-btn">Canalizar</button>
+      </div>
+
     </div>
-  </div>
 
-  <canvas id="particle-canvas"></canvas>
+  </section>
+
+  <!-- Partículas doradas -->
+  <canvas id="particles"></canvas>
 
   <audio id="background-audio"
-    src="https://cdn.pixabay.com/audio/2021/09/06/audio_f287ce8530.mp3"
+    src="https://cdn.pixabay.com/audio/2022/03/15/audio_19b3ce83c6.mp3"
     loop></audio>
+
 </body>
 </html>
+<script src="scripts.js"></script>
