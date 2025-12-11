@@ -1,0 +1,33 @@
+# ✨ SmartSleep — Wizarding Edition
+Aplicación temática inspirada en el mundo de *Harry Potter*, desarrollada como parte del módulo de despliegue con contenedores.  
+El propósito de este proyecto es demostrar el uso de **Docker**, el manejo de **servicios web**, el despliegue en **Render** y la definición de infraestructura mediante **código declarativo**.
+
+---
+
+## 🪄 Sobre la Aplicación
+
+SmartSleep: Wizarding Edition es una interfaz web que recrea una atmósfera del universo mágico:
+
+- Animaciones flotantes en el GIF principal  
+- Estrellas y partículas doradas ambientando el fondo  
+- Tipografía estilo “Mapa del Merodeador”  
+- Sonido suave al cargar  
+- Botón que activa un efecto visual de “hechizo”  
+- Capacidad para elegir diferentes temáticas de casas (Gryffindor, Slytherin, Ravenclaw y Hufflepuff)
+
+El objetivo es entregar una experiencia interactiva que sirva como contenedor para prácticas de despliegue.
+
+---
+
+Cada elemento cumple un rol específico:
+
+- **index.html** → estructura del sitio web  
+- **styles.css** → ambientación visual temática  
+- **script.js** → efectos mágicos e interactividad  
+- **server.js** → servidor Express que publica la aplicación  
+- **Dockerfile** → instrucciones para empaquetar la app  
+- **render.yaml** → configuración IaC para Render  
+- **.env.example** → ejemplo de variables de entorno  
+- **docker-compose.yml** → ejecución local simplificada  
+
+
