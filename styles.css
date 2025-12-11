@@ -1,14 +1,138 @@
-* {margin:0;padding:0;box-sizing:border-box;}
-body {background:#1d1b18;color:#f5eeda;font-family:'Marauders Map',serif;overflow-x:hidden;}
-.container {margin:40px auto;padding:30px;max-width:800px;background:rgba(30,27,23,0.95);border:3px solid #d4b86a;border-radius:12px;box-shadow:0 0 25px rgba(212,184,106,0.9);text-align:center;z-index:10;position:relative;}
-.titulo {font-size:60px;color:#d4b86a;text-shadow:0 0 10px #b58c38;margin-bottom:20px;}
-.subtitulo {color:#e8d8b3;font-size:24px;margin-top:10px;}
-.gif-container {margin:20px 0;}
-.gif {width:360px;border-radius:12px;border:2px solid #d4b86a;box-shadow:0 0 20px rgba(212,184,106,0.8);animation:float 6s ease-in-out infinite;}
-@keyframes float {0%{transform:translateY(0);}50%{transform:translateY(-15px);}100%{transform:translateY(0);}}
-.texto {font-size:20px;color:#e8ddc8;margin-top:15px;line-height:1.6;}
-.spell-button {margin-top:25px;padding:12px 24px;font-size:18px;font-family:'Marauders Map',serif;color:#1d1b18;background:#d4b86a;border:none;border-radius:8px;cursor:pointer;box-shadow:0 0 15px rgba(212,184,106,0.8);}
-.spell-button:hover {background:#b5954c;transform:scale(1.05);}
-.house-selector {margin-bottom:15px;color:#e8d8b3;}
-.house-selector select {padding:8px 12px;font-size:18px;border-radius:6px;border:1px solid #d4b86a;background:#2d2a28;color:#f5eeda;font-family:'Marauders Map',serif;}
-canvas#particle-canvas {position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:5;}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle at center, #0b0c1d 0%, #000000 100%);
+    font-family: 'Cinzel', serif;
+    color: #e8e2cf;
+    overflow-x: hidden;
+}
+
+/* Marco tipo pergamino mágico */
+.scroll-frame {
+    background: url("https://i.imgur.com/7LlJ5fL.png") center no-repeat;
+    background-size: cover;
+    padding: 60px 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container {
+    background: rgba(255, 248, 230, 0.84);
+    border: 4px solid #3a2f22;
+    border-radius: 10px;
+    padding: 40px;
+    width: 85%;
+    max-width: 700px;
+    text-align: center;
+    color: #2b1c12;
+    box-shadow: 0 0 40px rgba(57, 88, 173, 0.5);
+    animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Títulos estilo Harry Potter */
+.titulo {
+    font-family: 'Harry P', serif;
+    font-size: 70px;
+    color: #2c1b0f;
+    text-shadow: 0 0 12px #6fa3ff;
+}
+
+.subtitulo {
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #3a2f22;
+}
+
+/* Estilo selección de casa */
+.house-selector {
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.house-selector select {
+    padding: 10px 16px;
+    font-size: 18px;
+    border-radius: 6px;
+    background: #f5e7c8;
+    border: 2px solid #3a2f22;
+    font-family: 'Cinzel', serif;
+    color: #2b1c12;
+}
+
+/* Imagen mágica flotante azul */
+.magic-image {
+    width: 320px;
+    border-radius: 5px;
+    border: 3px solid #3a2f22;
+    filter: drop-shadow(0 0 20px #6fa3ff);
+    animation: mysticFloat 7s ease-in-out infinite;
+}
+
+@keyframes mysticFloat {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-18px) scale(1.03);
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+.texto {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* Botón con energía arcana */
+.spell-button {
+    margin-top: 30px;
+    padding: 12px 30px;
+    font-size: 20px;
+    border: 3px solid #3a2f22;
+    background: #6fa3ff;
+    color: #0b0c1d;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 20px #6fa3ff;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.spell-button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 35px #8ebcff;
+}
+
+/* Canvas de partículas */
+canvas#particle-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
