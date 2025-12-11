@@ -1,10 +1,17 @@
 services:
   - type: web
-    name: smartsleep-wizarding
+    name: smartsleep-harrypotter
     env: docker
     plan: free
     dockerfilePath: ./Dockerfile
     autoDeploy: true
+
     envVars:
       - key: PORT
         value: 8080
+      - key: DATABASE_URL
+        sync: true    # Render toma la URL real de la BD
+
+databases:
+  - name: hp-wizard-db
+    plan: free
